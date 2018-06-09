@@ -1,0 +1,13 @@
+$(document).ready(() => {
+
+    /* VARIABLES */
+
+
+
+
+    /* FUNCTIONS */
+
+
+
+
+});
