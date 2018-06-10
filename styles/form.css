@@ -4,6 +4,8 @@ body {
   width: 100%;
   margin: 0;
   font-family: sans-serif, arial;
+  background-color: #9febe5;
+  background-image: url("https://www.transparenttextures.com/patterns/white-plaster.png");
 }
 
 /* Oversizing catch-all */
@@ -57,16 +59,26 @@ a:active {
   line-height: 25px;
 }
 
-.form-space {
+.story-container {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
   width: 320px;
   height: auto;
-  margin: 50px 0 50px 30%;
+  margin: 50px 0 50px 0;
   padding: 10px;
   border: 1px solid #000;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px #000;
 }
 
 #story-form {
@@ -92,6 +104,28 @@ a:active {
 ::placeholder {
   color: #b0b4eb;
 }
+
+.story {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
+.story-text {
+  font-family: Gentium Basic;
+  font-size: 1.5em;
+  color: #000;
+  line-height: 32px;
+}
+
+.hide {
+  display: none;
+}
+
+
 
 
 

@@ -14,6 +14,7 @@
 
  <!-- FONTS / ICONS -->
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
 
 
 </head>
@@ -25,25 +26,53 @@
   <h1 class="form-title">Ok, now for the interactive part. Simply put words in the boxes (they can be the suggested word type or ANYTHING you want!) When you've filled the boxes simply hit "<em>Make My Story</em> " to see what you created.</h1>
  </header>
 
- <section class="form-space">
+ <section class="story-container">
 
-   <form id="story-form" action="" method="post">
-     <legend class="legend"><em>Use You Words</em></legend>
-     <input class="input" type="text" id="propName" placeholder="[proper name]" maxlength="25" autofocus required> <br>
-     <input class="input" type="text" id="adj1" placeholder="[adjective]"
-     maxlength="20" required> <br>
-     <input class="input" type="text" id="adj2" placeholder="[adjective]"
-     maxlength="20" required> <br>
-     <input class="input" type="text" id="verb" placeholder="[verb]"
-     maxlength="20" required> <br>
-     <input class="input" type="text" id="adv" placeholder="[adverb]"
-     maxlength="20" required> <br>
-     <button id="submit" type="button">Make My Story</button>
-   </form>
+   <section class="form-container">
 
- </section>
+     <form id="story-form" action="" method="post">
 
- <section class="story">
+       <legend class="legend">Story: <em>About Me</em></legend>
+
+       <input class="input" type="text" id="propName" placeholder="[proper name]" maxlength="25" autofocus required> <br>
+       <input class="input" type="text" id="noun1" placeholder="[noun]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="num1" placeholder="[number]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="noun2" placeholder="[noun]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="noun3" placeholder="[noun]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="noun4" placeholder="[noun]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="verb1" placeholder="[verb ending in 'ing']"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="num2" placeholder="[number]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="adj1" placeholder="[adjective]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="adj2" placeholder="[adjective]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="skill" placeholder="[a skill]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="noun5" placeholder="[noun]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="relative" placeholder="[a relative]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="feeling" placeholder="[feeling]"
+       maxlength="20" required> <br>
+       <input class="input" type="text" id="verb2" placeholder="[verb]"
+       maxlength="20" required> <br>
+
+       <button id="submit" type="button">Make My Story</button>
+
+     </form>
+
+   </section>
+
+   <section class="story hide">
+    <p class="story-text">
+   </section>
 
  </section>
 
