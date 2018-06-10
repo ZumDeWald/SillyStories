@@ -107,7 +107,7 @@ a:active {
 
 .story {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   width: 50%;
@@ -119,6 +119,12 @@ a:active {
   font-size: 1.5em;
   color: #000;
   line-height: 32px;
+}
+
+.reset {
+  margin-top: 25px;
+  font-size: 1em;
+  background-color: #b0b4eb;
 }
 
 .hide {
