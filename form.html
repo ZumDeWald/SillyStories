@@ -27,14 +27,18 @@
 
  <section class="form-space">
 
-   <form id="story-form">
+   <form id="story-form" action="" method="post">
      <legend class="legend"><em>Use You Words</em></legend>
-     <input class="input" type="text" name="propName" placeholder="[preoper name]"> <br>
-     <input class="input" type="text" name="adj1" placeholder="[adjective]"> <br>
-     <input class="input" type="text" name="adj2" placeholder="[adjective]"> <br>
-     <input class="input" type="text" name="verb" placeholder="[verb]"> <br>
-     <input class="input" type="text" name="adv" placeholder="[adverb]"> <br>
-     <input class="submit" type="submit" value="Make My Story">
+     <input class="input" type="text" name="propName" placeholder="[proper name]" maxlength="25" autofocus required> <br>
+     <input class="input" type="text" name="adj1" placeholder="[adjective]"
+     maxlength="20" required> <br>
+     <input class="input" type="text" name="adj2" placeholder="[adjective]"
+     maxlength="20" required> <br>
+     <input class="input" type="text" name="verb" placeholder="[verb]"
+     maxlength="20" required> <br>
+     <input class="input" type="text" name="adv" placeholder="[adverb]"
+     maxlength="20" required> <br>
+     <button class="submit" type="button">Make My Story</button>
    </form>
 
  </section>

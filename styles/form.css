@@ -80,12 +80,13 @@ a:active {
 
 .input {
   margin-top: 15px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .submit {
   margin-top: 25px;
-  font-size: 1.5em;
+  font-size: 1em;
+  background-color: #b0b4eb;
 }
 
 ::placeholder {
