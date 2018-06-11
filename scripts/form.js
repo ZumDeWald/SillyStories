@@ -55,6 +55,20 @@ const $submitButton = $("#submit");
   });
 
 
+ /* TESTING building an array from story to iterate over */
+
+  const story = 'Hello, my name is ${$propName}! I have a ${$noun1}, ${$num1} ${$noun2}s, and a ${$noun3}. My biggest focus lately has been my ${$noun4}. ${$verb1} over ${$num2} hours a day has kept me ${$adj1}. Hopefully my killer  ${$adj2} skills in ${$skill} will get me a new ${$noun5}. My ${$relative} thinks I am ${$feeling} and should be ${$verb2} instead.';
+
+  let storyArray = story.split(" ");
+
+  const storyFilter = (key) => {
+    return key.includes("$") === true;
+  }
+
+  storyArray = storyArray.filter(storyFilter);
+
+  console.log(storyArray);
+
 
 /*
 About Me
