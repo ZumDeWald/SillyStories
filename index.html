@@ -10,10 +10,12 @@
 
 <!-- STYLES -->
  <link rel="stylesheet" href="./styles/index.css">
+ <link rel="stylesheet" href="./styles/form.css">
 
 
 <!-- FONTS / ICONS -->
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Gentium+Basic" rel="stylesheet">
 
 
 </head>
@@ -24,15 +26,16 @@
    <h1 class="header-title">Silly Stories</h1>
  </header>
 
- <!-- MAIN -->
+ <!-- INDEX MAIN -->
 
  <main class="main-container">
 
-   <h2 class="summary-header">
-     Welcome to Silly Stories! When you're ready to start your own adventure simply select a story summary below to begin. Then fill in the information needed and generate your Silly Story!
-   </h2>
+   <section class="story-summary-container hide">
 
-   <section class="story-summary-container">
+     <h2 class="summary-header">
+       Welcome to Silly Stories! When you're ready to start your own adventure simply select a story summary below to begin. Then fill in the information needed and generate your Silly Story!
+     </h2>
+
      <ul class="story-summaries">
 
        <li class="summary #aboutMe">
@@ -58,6 +61,30 @@
 
      </ul>
    </section>
+
+
+   <!-- FORM MAIN -->
+
+    <section class="story-container">
+
+      <h1 class="form-title">Ok, now for the interactive part. Simply put words in the boxes <br> (they can be the suggested word type or ANYTHING you want!) <br> When you've filled the boxes simply hit "<em>Make My Story</em> " to see what you created.</h1>
+
+      <section class="form-container">
+
+        <form id="story-form" action="" method="post">
+
+          <legend class="legend">Story: <em>About Me</em></legend>
+
+
+        </form>
+
+      </section>
+
+      <section class="story hide">
+
+      </section>
+
+    </section>
 
 
  </main>
