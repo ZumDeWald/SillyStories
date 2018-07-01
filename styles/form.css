@@ -109,7 +109,7 @@ a:active {
 }
 
 #submit,
-#return {
+.return {
   margin: 25px 3px 0 0;
   font-size: 1em;
   background-color: #b0b4eb;
