@@ -62,7 +62,8 @@ a:active {
 .form-title {
   width: 100%;
   max-width: 1000px;
-  margin-top: 1em;
+  margin: auto;
+  padding: 0.8em;
   text-align: center;
   line-height: 1.3em;
   color: #000;
@@ -78,6 +79,7 @@ a:active {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 2em;
 }
 
 .form-container {

@@ -31,7 +31,7 @@ const $form = $("#story-form");
 
  /* TESTING building an array from story to iterate over  */
 
-  const story = 'Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my killer  ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.';
+  const story = 'Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.';
 
   let storyArray = story.split(" ");
 
@@ -187,7 +187,7 @@ const $form = $("#story-form");
 
     /* Story Generator */
 
-    $story.html(`<p class="story-text">&nbsp; Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my killer  ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead. </p> <br>
+    $story.html(`<p class="story-text">&nbsp; Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead. </p> <br>
     <button class="reset" type="button">Reset This Story</button>
     <button class="return" type="button">Choose New Story</button>`);
 
