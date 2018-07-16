@@ -43,9 +43,15 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
       this.storyArray = this.storySplit.filter(this.keyFilter);
     }
 
-      keyFilter (key) {
-        return key.includes("$") === true;
-      }
+    keyFilter (key) {
+      return key.includes("$") === true;
+    }
+
+    propertyBuilder (array) {
+      for (const element in array) {
+        this.element = element;
+      };
+    }
   }
 
 
@@ -79,11 +85,11 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
         break;
 
       case "${$noun1}" :
-        $form.append(`<input class="input" type="text" id="noun1" placeholder="[noun]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$noun1" placeholder="[noun]" maxlength="20" required> <br>`);
         break;
 
       case "${$noun2}" :
-        $form.append(`<input class="input" type="text" id="noun2" placeholder="[noun]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$noun2" placeholder="[noun]" maxlength="20" required> <br>`);
         break;
 
       case "${$noun3}" :
@@ -131,27 +137,27 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
         break;
 
       case "${$verb1}" :
-        $form.append(`<input class="input" type="text" id="verb1" placeholder="[verb ending in 'ing']" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="verb1" placeholder="[verb]" maxlength="20" required> <br>`);
         break;
 
       case "${$verb2}" :
-        $form.append(`<input class="input" type="text" id="verb2" placeholder="[verb ending in 'ing']" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="verb2" placeholder="[verb]" maxlength="20" required> <br>`);
         break;
 
       case "${$verb3}" :
-        $form.append(`<input class="input" type="text" id="verb3" placeholder="[verb ending in 'ing']" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="verb3" placeholder="[verb]" maxlength="20" required> <br>`);
         break;
 
       case "${$verb4}" :
-        $form.append(`<input class="input" type="text" id="verb4" placeholder="[verb ending in 'ing']" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="verb4" placeholder="[verb]" maxlength="20" required> <br>`);
         break;
 
       case "${$num1}" :
-        $form.append(`<input class="input" type="text" id="num1" placeholder="[number]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$num1" placeholder="[number]" maxlength="20" required> <br>`);
         break;
 
       case "${$num2}" :
-        $form.append(`<input class="input" type="text" id="num2" placeholder="[number]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$num2" placeholder="[number]" maxlength="20" required> <br>`);
         break;
 
       case "${$num3}" :
@@ -179,7 +185,7 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
         break;
 
       case "${$skill2}" :
-        $form.append(`<input class="input" type="text" id="skill1" placeholder="[skill]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="skill2" placeholder="[skill]" maxlength="20" required> <br>`);
         break;
       };
   };
@@ -192,7 +198,16 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
   $("form").on("click", "#submit", (e) => {
     $("form").submit();
 
-    let $propName = $("#propName").val();
+    const formElements = $form.elements;
+
+    const fillInElements = (e) => {
+      for (const element in formElements){
+       let element = element.value();
+     }
+    }
+/*
+
+    let $propName = currentStory.$propName;
     let $noun1 = $("#noun1").val();
     let $num1 = $("#num1").val();
     let $noun2 = $("#noun2").val();
@@ -207,6 +222,7 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
     let $fam1 = $("#fam1").val();
     let $feel1 = $("#feel1").val();
     let $verb2 = $("#verb2").val();
+*/
     toggleStory();
 
     (e).preventDefault;
