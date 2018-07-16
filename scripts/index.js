@@ -10,6 +10,12 @@ const $submitButton = $("#submit");
 const $form = $("#story-form");
 
 
+// Stories to iterate over
+
+ const aboutMe = 'Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.';
+
+
+const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$noun2} s, and a very ${$adj1} ${$noun3} ! You can play it with your ${$fam1} , or a friend. Don\'t ${$verb1} too close to the ${$adj2} ${$noun1} or you\'re ${$adv1} out!';
 
 
 
@@ -28,10 +34,29 @@ const $form = $("#story-form");
   };
 
 
+  /* Story Object */
+  class Story {
 
- /* TESTING building an array from story to iterate over  */
+    constructor (storyName) {
+      this.story = storyName;
+      this.storySplit = (this.story).split(" ");
+      this.storyArray = this.storySplit.filter(this.keyFilter);
+    }
 
-  const story = 'Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.';
+      keyFilter (key) {
+        return key.includes("$") === true;
+      }
+  }
+
+
+ //Call Story Object constructor
+ const currentStory = new Story(favoriteGame);
+
+
+
+ /* REPLACED BY OBJECT and METHODS ABOVE
+
+  const aboutMe = 'Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.';
 
   let storyArray = story.split(" ");
 
@@ -42,11 +67,12 @@ const $form = $("#story-form");
   storyArray = storyArray.filter(storyFilter);
 
 //  console.log(storyArray);
+*/
 
 
   // Switch Statement to Build FORM from above array
 
-  for (const word of storyArray) {
+  for (const word of currentStory.storyArray) {
     switch(word) {
       case "${$propName}" :
         $form.append(`<input class="input" type="text" id="propName" placeholder="[proper name]" maxlength="25" required> <br>`);
@@ -187,13 +213,15 @@ const $form = $("#story-form");
 
     /* Story Generator */
 
-    $story.html(`<p class="story-text">&nbsp; Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead. </p> <br>
+    $story.html(`<p class="story-text">&nbsp; ` + currentStory.story + ` </p> <br>
     <button class="reset" type="button">Reset This Story</button>
     <button class="return" type="button">Choose New Story</button>`);
 
   })
 
 
+
+ //Toggles to return to story form or return to story selections
   $storySummaryContainer.on("click", "#aboutMe", (e) => {
     toggleForm();
   });
