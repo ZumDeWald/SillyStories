@@ -28,18 +28,19 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
   class Story {
 
     constructor (storyName) {
-      this.story1 = aboutMe;
-      this.storySplit1 = (this.story1).split(" ");
-      this.storyArray1 = this.storySplit1.filter(this.keyFilter);
-
-      this.story2 = favoriteGame;
-      this.storySplit2 = (this.story2).split(" ");
-      this.storyArray2 = this.storySplit2.filter(this.keyFilter);
-
+      this.story = storyName;
+      this.storySplit = (this.story).split(" ");
+      this.storyArray = this.storySplit.filter(this.keyFilter);
     }
 
     keyFilter (key) {
       return key.includes("$") === true;
+    }
+
+    propertyBuilder (array) {
+      for (let element in array) {
+        this.element = element;
+      };
     }
 
     //Toggle story/form show/hide
@@ -54,29 +55,38 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
       $story.toggleClass("hide");
     };
 
+    // Story Generator
+
+    insertStory () {
+      $storyText.text(currentStory.story);
+    }
+
+
   }
 
 
  //Call Story Object constructor
- const currentStory = new Story();
+ const currentStory = new Story(favoriteGame);
 
+ //Insert story
+ currentStory.insertStory();
 
 
 
   // Switch Statement to Build FORM from above array
 
-  for (const word of currentStory.storyArray1) {
+  for (const word of currentStory.storyArray) {
     switch(word) {
       case "${$propName}" :
         $form.append(`<input class="input" type="text" id="propName" placeholder="[proper name]" maxlength="25" required> <br>`);
         break;
 
       case "${$noun1}" :
-        $form.append(`<input class="input" type="text" id="noun1" placeholder="[noun]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$noun1" placeholder="[noun]" maxlength="20" required> <br>`);
         break;
 
       case "${$noun2}" :
-        $form.append(`<input class="input" type="text" id="noun2" placeholder="[noun]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$noun2" placeholder="[noun]" maxlength="20" required> <br>`);
         break;
 
       case "${$noun3}" :
@@ -104,11 +114,23 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
         break;
 
       case "${$adj4}" :
-        $form.append(`<input class="input" type="text" id="adj4" placeholder="[adjective]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="adj3" placeholder="[adjective]" maxlength="20" required> <br>`);
         break;
 
       case "${$adv1}" :
         $form.append(`<input class="input" type="text" id="adv1" placeholder="[adverb]" maxlength="20" required> <br>`);
+        break;
+
+      case "${$adv1}" :
+        $form.append(`<input class="input" type="text" id="adv1" placeholder="[adverb]" maxlength="20" required> <br>`);
+        break;
+
+      case "${$adv2}" :
+        $form.append(`<input class="input" type="text" id="adv2" placeholder="[adverb]" maxlength="20" required> <br>`);
+        break;
+
+      case "${$adv3}" :
+        $form.append(`<input class="input" type="text" id="adv3" placeholder="[adverb]" maxlength="20" required> <br>`);
         break;
 
       case "${$verb1}" :
@@ -119,24 +141,48 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
         $form.append(`<input class="input" type="text" id="verb2" placeholder="[verb]" maxlength="20" required> <br>`);
         break;
 
+      case "${$verb3}" :
+        $form.append(`<input class="input" type="text" id="verb3" placeholder="[verb]" maxlength="20" required> <br>`);
+        break;
+
+      case "${$verb4}" :
+        $form.append(`<input class="input" type="text" id="verb4" placeholder="[verb]" maxlength="20" required> <br>`);
+        break;
+
       case "${$num1}" :
-        $form.append(`<input class="input" type="text" id="num1" placeholder="[number]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$num1" placeholder="[number]" maxlength="20" required> <br>`);
         break;
 
       case "${$num2}" :
-        $form.append(`<input class="input" type="text" id="num2" placeholder="[number]" maxlength="20" required> <br>`);
+        $form.append(`<input class="input" type="text" id="$num2" placeholder="[number]" maxlength="20" required> <br>`);
+        break;
+
+      case "${$num3}" :
+        $form.append(`<input class="input" type="text" id="num3" placeholder="[number]" maxlength="20" required> <br>`);
         break;
 
       case "${$feel1}" :
         $form.append(`<input class="input" type="text" id="feel1" placeholder="[feeling (happy/etc)]" maxlength="20" required> <br>`);
         break;
 
+      case "${$feel2}" :
+        $form.append(`<input class="input" type="text" id="feel2" placeholder="[feeling (happy/etc)]" maxlength="20" required> <br>`);
+        break;
+
       case "${$fam1}" :
         $form.append(`<input class="input" type="text" id="fam1" placeholder="[relative (sister/etc)]" maxlength="20" required> <br>`);
         break;
 
+      case "${$fam2}" :
+        $form.append(`<input class="input" type="text" id="fam2" placeholder="[relative (sister/etc)]" maxlength="20" required> <br>`);
+        break;
+
       case "${$skill1}" :
         $form.append(`<input class="input" type="text" id="skill1" placeholder="[skill]" maxlength="20" required> <br>`);
+        break;
+
+      case "${$skill2}" :
+        $form.append(`<input class="input" type="text" id="skill2" placeholder="[skill]" maxlength="20" required> <br>`);
         break;
       };
   };
@@ -148,31 +194,45 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
 
   $("form").on("click", "#submit", (e) => {
     $("form").submit();
+    //
+    // const formElements = $form.elements;
+    // console.log(formElements.value());
+    //
+    // const fillInWords = (form) => {
+    //   for  (let i=0; i < form.length; i++) {
+    //     let element = element.value();
+    //   }
+    //
+    // }
+    //
+    // const fillInElements = (form) => {
+    //   for (const word in form){
+    //    let element = element.value();
+    //  }
+    //  $storyText.text(`${$num2}`);
+    // }
+    //
+    // fillInWords(formElements);
 
     let $propName = $("#propName").val();
-    let $num1 = $("#num1").val();
-    let $num2 = $("#num2").val();
     let $noun1 = $("#noun1").val();
+    let $num1 = $("#num1").val();
     let $noun2 = $("#noun2").val();
     let $noun3 = $("#noun3").val();
     let $noun4 = $("#noun4").val();
-    let $noun5 = $("#noun5").val();
     let $verb1 = $("#verb1").val();
-    let $verb2 = $("#verb2").val();
+    let $num2 = $("#num2").val();
     let $adj1 = $("#adj1").val();
     let $adj2 = $("#adj2").val();
-    let $adj3 = $("#adj3").val();
-    let $adj4 = $("#adj4").val();
-    let $adv1 = $("#adv1").val();
     let $skill1 = $("#skill1").val();
+    let $noun5 = $("#noun5").val();
     let $fam1 = $("#fam1").val();
     let $feel1 = $("#feel1").val();
-
-    (e).preventDefault;
-
-    $storyText.text(`Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.`);
+    let $verb2 = $("#verb2").val();
 
     currentStory.toggleStory();
+
+    (e).preventDefault;
 
   })
 
