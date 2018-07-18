@@ -61,13 +61,11 @@ a:active {
 
 .form-title {
   width: 100%;
-  max-width: 1000px;
+  max-width: 980px;
   margin: auto;
-  padding: 0.8em;
   text-align: center;
   line-height: 1.3em;
   color: #000;
-  padding: 10px;
   border: 1px solid #000;
   background-color: #fff;
   box-shadow: 3px 3px 5px #000;
@@ -112,7 +110,7 @@ a:active {
 
 #submit,
 .return {
-  margin: 25px 3px 0 0;
+  margin: 25px 8px 0 0;
   font-size: 1em;
   background-color: #b0b4eb;
 }
@@ -124,15 +122,9 @@ a:active {
 .story {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 50%;
-  margin: auto;
-}
-
-.story-text {
-  font-family: Gentium Basic;
-  font-size: 1.5em;
   color: #000;
   line-height: 32px;
   margin: 50px 0 50px 0;
@@ -140,6 +132,12 @@ a:active {
   border: 1px solid #000;
   background-color: #fff;
   box-shadow: 3px 3px 5px #000;
+}
+
+.story-text {
+  font-family: Gentium Basic;
+  font-size: 1.5em;
+
 }
 
 .reset {
