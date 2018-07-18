@@ -11,15 +11,45 @@ const $storyText = $(".story-text");
 const $submitButton = $("#submit");
 const $form = $("#story-form");
 
+let tracker = "";
+let choiceArray = "";
+
 
 
 
 // Stories to iterate over
 
- const aboutMe = 'Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.';
+const aboutMe = 'Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.';
 
 
 const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$noun2} s, and a very ${$adj1} ${$noun3} ! You can play it with your ${$fam1} , or a friend. Don\'t ${$verb1} too close to the ${$adj2} ${$noun1} or you\'re ${$adv1} out!';
+
+
+//Toggles to return to story form or return to story selections
+ $storySummaryContainer.on("click", "#aboutMe", (e) => {
+   currentStory.toggleForm();
+   tracker = true;
+   switcher();
+ });
+
+ $storySummaryContainer.on("click", "#favoriteGame", (e) => {
+   currentStory.toggleForm();
+   tracker = false;
+   switcher();
+ });
+
+ $story.on("click", ".reset", (e) => {
+   currentStory.toggleStory();
+ });
+
+ $story.on("click", ".return", (e) => {
+   currentStory.toggleStory();
+   currentStory.toggleForm();
+ });
+
+ $form.on("click", ".return", (e) => {
+   currentStory.toggleForm();
+ });
 
 
 
@@ -58,6 +88,7 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
 
 
  //Call Story Object constructor
+
  const currentStory = new Story();
 
 
@@ -65,7 +96,18 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
 
   // Switch Statement to Build FORM from above array
 
-  for (const word of currentStory.storyArray1) {
+const switcher = () => {
+
+  $storyText.text("");
+  $form.html(`<legend class="legend">Story: <em>About Me</em></legend>`);
+
+  if (tracker) {
+    choiceArray = currentStory.storyArray1;
+  } else {
+    choiceArray = currentStory.storyArray2;
+  }
+
+  for (const word of choiceArray) {
     switch(word) {
       case "${$propName}" :
         $form.append(`<input class="input" type="text" id="propName" placeholder="[proper name]" maxlength="25" required> <br>`);
@@ -143,6 +185,8 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
   $form.append(`<button id="submit" type="button">Make My Story</button>`);
   $form.append(`<button class="return" type="button">Choose New Story</button>`);
 
+}
+
 
   //Submit button action for FORM
 
@@ -170,33 +214,18 @@ const favoriteGame = 'My favorite game has ${$num1} ${$noun1} s, ${$num2} ${$nou
 
     (e).preventDefault;
 
+    if (tracker) {
+
     $storyText.text(`Hello, my name is ${$propName} ! I have a ${$noun1} , ${$num1} ${$noun2} s, and a ${$noun3} . My biggest focus lately has been my ${$noun4} . ${$verb1} over ${$num2} hours a day has kept me ${$adj1} . Hopefully my ${$adj2} skills in ${$skill1} will get me a new ${$noun5} . My ${$fam1} thinks I am ${$feel1} and should be ${$verb2} instead.`);
+
+  } else {
+    $storyText.text(`My favorite game has ${$num1} ${$noun1} (s), ${$num2} ${$noun2} (s), and a very ${$adj1} ${$noun3} ! You can play it with your ${$fam1} or a friend. Don\'t ${$verb1} too close to the ${$adj2} ${$noun1} or you\'re ${$adv1} out!`);
+
+  }
 
     currentStory.toggleStory();
 
   })
-
-
-
- //Toggles to return to story form or return to story selections
-  $storySummaryContainer.on("click", "#aboutMe", (e) => {
-    currentStory.toggleForm();
-  });
-
-  $story.on("click", ".reset", (e) => {
-    currentStory.toggleStory();
-  });
-
-  $story.on("click", ".return", (e) => {
-    currentStory.toggleStory();
-    currentStory.toggleForm();
-  });
-
-  $form.on("click", ".return", (e) => {
-    currentStory.toggleForm();
-  });
-
-
 
 
 
