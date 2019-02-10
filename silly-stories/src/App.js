@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import Menu from './components/Menu.js';
+
+import './stylesheets/App.css';
+import './stylesheets/Menu.css';
 
 class App extends Component {
   render() {
@@ -10,6 +14,7 @@ class App extends Component {
             Silly Stories
           </p>
         </header>
+        <Menu />
       </main>
     );
   }

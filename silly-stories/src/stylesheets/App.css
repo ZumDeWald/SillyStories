@@ -32,8 +32,8 @@ video {
 
 #top-level-container {
   display: grid;
-  grid-template-columns: [col-start] 100% [col-end];
-  grid-template-rows: [line-one] 80px [line-two] 60px [line-three] 1fr [line-four] 50px [line-five];
+  grid-template-columns: [c1] 100% [c2];
+  grid-template-rows: [r1] 80px [r2] 150px [r3] 1fr [r4] 50px [r5];
   width: 100%;
   height: auto;
   margin: 0;
@@ -45,6 +45,8 @@ video {
 
 
 .App-header {
+  grid-column: c1 / c2;
+  grid-row: r1 / r2;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

@@ -1,0 +1,30 @@
+/* Import variables and general style */
+@import 'App.css';
+
+#menu {
+  position: relative;
+  grid-column: c1 / c2;
+  grid-row: r2 / r3;
+  width: 200px;
+  background-color: #000;
+  font-family: var(--font-main);
+}
+
+.menu-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1.2em;
+  color: var(--color-main);
+  transform: rotate(90deg);
+  transition-duration: 200ms;
+}
+
+.menu-list {
+  list-style: none;
+  color: #fff;
+}
+
+.menu-item {
+  padding: 0.2em 0;
+}
