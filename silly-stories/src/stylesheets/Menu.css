@@ -8,16 +8,21 @@
   width: 200px;
   background-color: #000;
   font-family: var(--font-main);
+  transition-duration: 300ms;
 }
 
-.menu-close {
+.closed {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.menu-icon {
   position: absolute;
-  right: 5px;
+  right: -25px;
   top: 5px;
   font-size: 1.2em;
   color: var(--color-main);
   transform: rotate(90deg);
-  transition-duration: 200ms;
+  transition-duration: 300ms;
 }
 
 .menu-list {
@@ -27,4 +32,8 @@
 
 .menu-item {
   padding: 0.2em 0;
+}
+
+.rotate-90 {
+  transform: rotate(-90deg);
 }
