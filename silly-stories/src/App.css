@@ -28,20 +28,29 @@ video {
   --font-header: 'Raleway', sans-serif;
 }
 
+/* Setup Grid on top level div */
+
+#top-level-container {
+  display: grid;
+  grid-template-columns: [col-start] 100% [col-end];
+  grid-template-rows: [line-one] 80px [line-two] 60px [line-three] 1fr [line-four] 50px [line-five];
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Common styling */
 
-.App {
-  text-align: center;
-}
 
 .App-header {
-  background: radial-gradient(circle at 50%, var(--color-light), var(--color-main));
-  min-height: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: radial-gradient(circle at 50%, var(--color-light), var(--color-main));
   color: #fff;
   font-family: var(--font-header);
   font-size: 2em;

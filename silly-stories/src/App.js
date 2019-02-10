@@ -4,13 +4,13 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <main id="top-level-container">
         <header className="App-header">
           <p>
             Silly Stories
           </p>
         </header>
-      </div>
+      </main>
     );
   }
 }
