@@ -1,3 +1,12 @@
+
+/* Global variables */
+:root {
+  --color-main: #DC0000;
+  --color-light: #FF3333;
+  --font-main: 'IBM Plex Sans', sans-serif;
+  --font-header: 'Raleway', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -8,14 +17,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: radial-gradient(circle at 50%, var(--color-light), var(--color-main));
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  font-family: var(--font-header);
+  font-size: 2em;
 }
 
 .App-link {
