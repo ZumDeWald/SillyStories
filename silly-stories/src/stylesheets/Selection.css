@@ -9,7 +9,6 @@
   grid-template-columns: [sc1] 1fr [sc2];
   grid-template-rows: [sr1] 50px [sr2] 1fr [sr3];
   width: 100%;
-  min-height: calc(100vh - 100px);
   margin: 1.2em 0;
   padding: 0 0.3em;
   box-sizing: border-box;

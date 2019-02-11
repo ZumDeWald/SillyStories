@@ -9,43 +9,35 @@ const Selection = (props) => {
       <h3 className="header-text bottom-line selection-header">Choose your adventure</h3>
       <ul className="no-list-style selection-list">
         <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
+            onClick={() => {props.handleSetStory(Stories.aboutMe)}}>
           About Me
         </li>
         <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
+            onClick={() => {props.handleSetStory(Stories.aboutMe)}}>
           About Me
         </li>
         <li className="selection-list-item flex-col-center"
-            value={Stories.favoriteGame}>
+            onClick={() => {props.handleSetStory(Stories.favoriteGame)}}>
           Favorite Game
         </li>
         <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
+            onClick={() => {props.handleSetStory(Stories.aboutMe)}}>
+          About Me
+        </li><li className="selection-list-item flex-col-center"
+            onClick={() => {props.handleSetStory(Stories.aboutMe)}}>
+          About Me
+        </li><li className="selection-list-item flex-col-center"
+            onClick={() => {props.handleSetStory(Stories.aboutMe)}}>
+          About Me
+        </li><li className="selection-list-item flex-col-center"
+            onClick={() => {props.handleSetStory(Stories.aboutMe)}}>
+          About Me
+        </li><li className="selection-list-item flex-col-center"
+            onClick={() => {props.handleSetStory(Stories.aboutMe)}}>
           About Me
         </li>
         <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
-          About Me
-        </li>
-        <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
-          About Me
-        </li>
-        <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
-          About Me
-        </li>
-        <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
-          About Me
-        </li>
-        <li className="selection-list-item flex-col-center"
-            value={Stories.aboutMe}>
-          About Me
-        </li>
-        <li className="selection-list-item flex-col-center"
-            value={Stories.favoriteGame}>
+            onClick={() => {props.handleSetStory(Stories.favoriteGame)}}>
           Favorite Game
         </li>
       </ul>

@@ -1,0 +1,17 @@
+/* Import variables and general style */
+@import 'App.css';
+
+#form {
+  position: relative;
+  grid-column: c1 / c2;
+  grid-row: r4 / r5;
+  width: 100%;
+  margin: 1.2em 0;
+  padding: 0 0.3em;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.legend {
+  color: #000;
+}

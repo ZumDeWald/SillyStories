@@ -33,13 +33,13 @@ const Menu = (props) => {
           Option 1
         </li>
         <li className="menu-item">
-          Option 1
+          Option 2
         </li>
         <li className="menu-item">
-          Option 1
+          Option 3
         </li>
         <li className="menu-item">
-          Option 1
+          Option 4
         </li>
       </ul>
     </section>
