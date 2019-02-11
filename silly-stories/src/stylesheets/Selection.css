@@ -3,11 +3,36 @@
 
 #selection {
   position: relative;
-  grid-columns: c1 / c2;
-  grid-rows: r2 / r4;
+  grid-column: c1 / c2;
+  grid-row: r2 / r4;
+  display: grid;
+  grid-template-columns: [sc1] 1fr [sc2];
+  grid-template-rows: [sr1] 50px [sr2] 1fr [sr3];
   width: 100%;
-  margin: 1em 0;
+  min-height: calc(100vh - 100px);
+  margin: 1.2em 0;
   padding: 0 0.3em;
   box-sizing: border-box;
   z-index: 1;
+}
+
+.selection-header {
+  grid-column: sc1 / sc2;
+  grid-row: sr1 / sr2;
+}
+
+.selection-list {
+  grid-column: sc1 / sc2;
+  grid-row: sr2 / sr3;
+  align-self: flex-start;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, 80px);
+  width: 100%;
+  margin-top: 1em;
+}
+
+.selection-list-item {
+  padding: 0.2em;
+  margin: 0;
 }
