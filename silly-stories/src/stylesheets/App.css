@@ -10,7 +10,7 @@
 body {
   width: 100%;
   margin: 0;
-  font-family: sans-serif, arial;
+  font-family: var(--font-main), sans-serif, arial;
 }
 
 img,

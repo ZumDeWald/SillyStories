@@ -2,13 +2,15 @@
 @import 'App.css';
 
 #menu {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 80px;
   grid-column: c1 / c2;
   grid-row: r2 / r3;
   width: 200px;
   background-color: #000;
-  font-family: var(--font-main);
   transition-duration: 300ms;
+  z-index: 3;
 }
 
 .closed {

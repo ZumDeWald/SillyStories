@@ -1,0 +1,13 @@
+/* Import variables and general style */
+@import 'App.css';
+
+#selection {
+  position: relative;
+  grid-columns: c1 / c2;
+  grid-rows: r2 / r4;
+  width: 100%;
+  margin: 1em 0;
+  padding: 0 0.3em;
+  box-sizing: border-box;
+  z-index: 1;
+}
