@@ -16,7 +16,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      story: ["Choose Story", `Nothing Chosen Yet`]
+      story: ["Choose Story", null]
     }
   }
 
@@ -34,7 +34,8 @@ class App extends Component {
         </header>
         <Menu />
         <Selection handleSetStory={this.setStory}/>
-        <Form storyName={this.state.story[0]}/>
+        <Form storyName={this.state.story[0]}
+              story={this.state.story[1]}/>
       </main>
     );
   }
