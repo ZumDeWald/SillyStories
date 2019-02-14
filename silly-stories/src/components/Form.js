@@ -34,6 +34,7 @@ const Form = (props) => {
 
        <legend className="legend">Story: <em>{!props.story ? "Please Choose A Story" : props.storyName}</em></legend>
 
+         {/* Conditional that maps over the filtered story list of words if it is present, or displays a simple message if it is empty/null */}
          {!!filteredStory ? filteredStory.map((word, index) => (
          Switch(word)
        )) : <p>Please select a story</p>}
