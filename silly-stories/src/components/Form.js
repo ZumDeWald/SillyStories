@@ -25,6 +25,10 @@ const Form = (props) => {
    }
   })
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+  }
+
 
  return (
    <section>
@@ -39,6 +43,9 @@ const Form = (props) => {
          Switch(word)
        )) : <p>Please select a story</p>}
 
+       <button id="submit"
+               type="button"
+               onClick={() => {handleFormSubmit()}}>Make My Story!</button>
 
      </form>
 
