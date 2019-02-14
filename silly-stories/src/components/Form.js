@@ -45,7 +45,7 @@ const Form = (props) => {
 
        <button id="submit"
                type="button"
-               onClick={() => {handleFormSubmit()}}>Make My Story!</button>
+               onClick={(e) => {handleFormSubmit(e)}}>Make My Story!</button>
 
      </form>
 
