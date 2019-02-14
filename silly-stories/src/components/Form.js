@@ -31,7 +31,7 @@ const Form = (props) => {
 
 
  return (
-   <section>
+   <section id="form">
      <h3 className="header-text bottom-line">Add your own fun to the story</h3>
 
      <form id="story-form" action="" method="post">
@@ -40,8 +40,7 @@ const Form = (props) => {
 
          {/* Conditional that maps over the filtered story list of words if it is present, or displays a simple message if it is empty/null */}
          {!!filteredStory ? filteredStory.map((word, index) => (
-         Switch(word)
-       )) : <p>Please select a story</p>}
+         Switch(word) )) : <p>Please select a story</p>}
 
        <button id="submit"
                type="button"

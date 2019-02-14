@@ -33,9 +33,8 @@ video {
 #top-level-container {
   display: grid;
   grid-template-columns: [c1] 100% [c2];
-  grid-template-rows: [r1] 80px [r2] 150px [r3] 1fr [r4] 1fr [r5] 50px [r6];
+  grid-template-rows: [r1] 80px [r2] 150px [r3] 1fr [r4] 2fr [r5] 50px [r6];
   width: 100%;
-  height: auto;
   margin: 0;
   padding: 0;
 }

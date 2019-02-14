@@ -6,7 +6,7 @@
   grid-column: c1 / c2;
   grid-row: r4 / r5;
   width: 100%;
-  margin: 1.2em 0;
+  margin: 0;
   padding: 0 0.3em;
   box-sizing: border-box;
   z-index: 1;
@@ -14,4 +14,22 @@
 
 .legend {
   color: #000;
+}
+
+.input {
+  width: 100%;
+  max-width: 200px;
+  margin: 0.5em 0.2em;
+  padding: 0.3em 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid gray;
+}
+
+#submit {
+  display: block;
+  width: 100px;
+  margin: 0.5em 0;
+  background-color: #fff;
+  border: 1px dashed gray;
 }
