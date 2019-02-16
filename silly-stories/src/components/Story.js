@@ -2,9 +2,17 @@ import React from 'react';
 
 const Story = (props) => {
 
+  const revealStory = () => {
+    const spans = document.getElementsByTagName("span");
+    for (let i=0; i < spans.length; i++) {
+      spans[i].classList.toggle("visible");
+    };
+  }
+
 
   return (
     <section id="story">
+      <h3>About Me</h3>
       <span>Hello, my name is </span>
       <input className="input" type="text" name="properName1" placeholder="[proper name]" maxLength="25" required />
       <span>! I have a </span>
@@ -35,6 +43,8 @@ const Story = (props) => {
       <span>and should be </span>
       <input className="input" type="text" name="verb2" placeholder="[verb]" maxLength="25" required />
       <span>instead.</span>
+      <button id="revealStory"
+              onClick={revealStory}>Reveal my story!</button>
     </section>
   );
 }
