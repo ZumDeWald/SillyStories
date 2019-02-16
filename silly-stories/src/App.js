@@ -28,10 +28,12 @@ class App extends Component {
     this.setState({ story : newStory });
   }
 
+  /* Generic setState that takes in the key and value to add to state dynamically through arguments. Used below to dynamically add each input entry from form data dynamically without knowing which values to expect beforehand. */
   setFormSubmissions = (targetName, targetValue) => {
     this.setState({ [targetName] : targetValue });
   }
 
+  /* Retrieves form data from Form component and adds each entry to local state */
   formSubmit = (e) => {
     e.preventDefault();
     const target = e.target;
