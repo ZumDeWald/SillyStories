@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
+import Stories from './Stories.js';
+
 const Menu = (props) => {
 
   //Destructuring
-  const { resetStory } = props
+  const { resetStory, handleSetStory } = props
 
   const [menuOpen, setMenuChange] = useState(false);
 
@@ -27,8 +29,13 @@ const Menu = (props) => {
     }
   }
 
-  const handleResetStory = () => {
+  const mainMenu = () => {
     resetStory();
+    changeMenuState();
+  }
+
+  const changeStory = (story) => {
+    handleSetStory(story);
     changeMenuState();
   }
 
@@ -38,8 +45,8 @@ const Menu = (props) => {
        onClick={() => {changeMenuState()}}></i>
       <ul className="menu-list">
         <li className="menu-item"
-            onClick={handleResetStory}>
-          Choose new story
+            onClick={mainMenu}>
+          Main Menu
         </li>
         <li className="menu-item">
           Option 2
@@ -50,6 +57,13 @@ const Menu = (props) => {
         <li className="menu-item">
           Option 4
         </li>
+        {Stories.map((story, index) => (
+          <li className="menu-item"
+              onClick={() => {changeStory(story)}}
+              key={index}>
+            {story[0]}
+          </li>
+        ))}
       </ul>
     </section>
   );

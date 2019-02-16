@@ -65,7 +65,8 @@ class App extends Component {
             Silly Stories
           </p>
         </header>
-        <Menu resetStory={this.resetStory}/>
+        <Menu resetStory={this.resetStory}
+              handleSetStory={this.setStory} />
         {(!this.state.showStory) ?
           <Selection handleSetStory={this.setStory} />
           :

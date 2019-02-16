@@ -48,15 +48,16 @@ const Stories = [
    <section>
      <span>My favorite game has </span>
      <input className="input" type="text" name="num1" placeholder="[number]" maxLength="25" required />
-     <input className="input" type="text" name="noun1" placeholder="[noun]" maxLength="25" required /> 's,
+     <input className="input" type="text" name="noun1" placeholder="[noun]" maxLength="25" required />
+     <span>'s, </span>
      <input className="input" type="text" name="num2" placeholder="[number]" maxLength="25" required />
-     <input className="input" type="text" name="noun2" placeholder="[noun]" maxLength="25" required /> 's
-     <span>, and a very </span>
+     <input className="input" type="text" name="noun2" placeholder="[noun]" maxLength="25" required />
+     <span>'s, and a very </span>
      <input className="input" type="text" name="adj1" placeholder="[adjective]" maxLength="25" required />
      <input className="input" type="text" name="noun3" placeholder="[noun]" maxLength="25" required />
-     <span>! You can play it with your </span>
-     <input className="input" type="text" name="fam1" placeholder="[family member]" maxLength="25" required />
-     <span>, or a friend. Don't </span>
+     <span>! You can play it with </span>
+     <input className="input" type="text" name="friend1" placeholder="[proper name]" maxLength="25" required />
+     <span>, or your mother. Don't </span>
      <input className="input" type="text" name="verb1" placeholder="[verb]" maxLength="25" required />
      <span>too close to the </span>
      <input className="input" type="text" name="adj2" placeholder="[adjective]" maxLength="25" required />
