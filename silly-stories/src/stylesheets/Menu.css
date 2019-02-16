@@ -1,0 +1,44 @@
+/* Import variables and general style */
+@import 'App.css';
+
+#menu {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  grid-column: c1 / c2;
+  grid-row: r2 / r3;
+  width: 200px;
+  background-color: #000;
+  transition-duration: 300ms;
+  z-index: 3;
+}
+
+.closed {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.menu-icon {
+  position: absolute;
+  right: -40px;
+  top: -15px;
+  font-size: 2em;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  box-shadow: -1px 3px 15px #000;
+  transform: rotate(90deg);
+  transition-duration: 300ms;
+}
+
+.menu-list {
+  list-style: none;
+  color: #fff;
+}
+
+.menu-item {
+  padding: 0.2em 0;
+}
+
+.rotate-90 {
+  transform: rotate(-90deg);
+}
