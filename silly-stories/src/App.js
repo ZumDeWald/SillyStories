@@ -16,6 +16,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showStory: false,
       story: ["Choose Story", null]
     }
 
@@ -26,6 +27,11 @@ class App extends Component {
 
   setStory = (newStory) => {
     this.setState({ story : newStory });
+    this.setState({ showStory: true });
+  }
+
+  resetStory = () => {
+    this.setState({ showStory: false });
   }
 
   /* setState to add each entry from the form submission into it's own array with the name and value of the entry. This will be passed to the FinalStory component and used to replace the placeholder words. */
@@ -59,9 +65,12 @@ class App extends Component {
             Silly Stories
           </p>
         </header>
-        <Menu />
-        <Selection handleSetStory={this.setStory} />
-        <Story chosenStory={this.state.story} />
+        <Menu resetStory={this.resetStory}/>
+        {(!this.state.showStory) ?
+          <Selection handleSetStory={this.setStory} />
+          :
+          <Story chosenStory={this.state.story} />
+          }
       </main>
     );
   }

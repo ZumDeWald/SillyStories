@@ -4,7 +4,7 @@
 #story {
   position: relative;
   grid-column: c1 / c2;
-  grid-row: r4 / r5;
+  grid-row: r2 / r4;
   width: 100%;
   margin: 1.2em 0;
   padding: 0 1em;

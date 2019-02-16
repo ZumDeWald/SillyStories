@@ -64,10 +64,10 @@ const Stories = [
      <span>or you're </span>
      <input className="input" type="text" name="adv1" placeholder="[adverb]" maxLength="25" required />
      <span>out!</span>
-    <button id="revealStory"
-            onClick={revealStory}>Reveal my story!
-    </button>
-  </section>]
-]
+     <button id="revealStory"
+             onClick={revealStory}>Reveal my story!
+     </button>
+   </section>]
+  ]
 
 export default Stories;

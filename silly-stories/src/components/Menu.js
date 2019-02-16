@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 const Menu = (props) => {
 
+  //Destructuring
+  const { resetStory } = props
+
   const [menuOpen, setMenuChange] = useState(false);
 
   const changeMenuState = () => {
@@ -24,13 +27,19 @@ const Menu = (props) => {
     }
   }
 
+  const handleResetStory = () => {
+    resetStory();
+    changeMenuState();
+  }
+
   return (
     <section id="menu" className="closed">
     <i className="fas fa-chevron-circle-down menu-icon rotate-90"
        onClick={() => {changeMenuState()}}></i>
       <ul className="menu-list">
-        <li className="menu-item">
-          Option 1
+        <li className="menu-item"
+            onClick={handleResetStory}>
+          Choose new story
         </li>
         <li className="menu-item">
           Option 2
