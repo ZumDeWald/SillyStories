@@ -18,10 +18,30 @@ class App extends Component {
     this.state = {
       story: ["Choose Story", null]
     }
+
+    //Bindings
+    this.setFormSubmissions = this.setFormSubmissions.bind(this);
+    this.formSubmit = this.formSubmit.bind(this);
   }
 
   setStory = (newStory) => {
     this.setState({ story : newStory });
+  }
+
+  setFormSubmissions = (targetName, targetValue) => {
+    this.setState({ [targetName] : targetValue });
+  }
+
+  formSubmit = (e) => {
+    e.preventDefault();
+    const target = e.target;
+    /* Loop over form data and extract each input value into a new entry in local state.
+    Unable to get for...in loop to work, had to use regular for loop and then have the index to access each entry in the form data. */
+    for (let i = 0; i < target.length; i++) {
+      let targetName = target[i].name;
+      let targetValue = target[i].value;
+      this.setFormSubmissions(targetName, targetValue);
+    }
   }
 
   render() {
@@ -35,7 +55,8 @@ class App extends Component {
         <Menu />
         <Selection handleSetStory={this.setStory}/>
         <Form storyName={this.state.story[0]}
-              story={this.state.story[1]}/>
+              story={this.state.story[1]}
+              handleFormSubmit={this.formSubmit}/>
       </main>
     );
   }

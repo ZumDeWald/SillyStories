@@ -25,16 +25,15 @@ const Form = (props) => {
    }
   })
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-  }
-
+  //Destructuring from props
+  const { handleFormSubmit } = props;
 
  return (
    <section id="form">
      <h3 className="header-text bottom-line">Add your own fun to the story</h3>
 
-     <form id="story-form" action="" method="post">
+     <form id="story-form"
+           onSubmit={handleFormSubmit}>
 
        <legend className="legend">Story: <em>{!props.story ? "Please Choose A Story" : props.storyName}</em></legend>
 
@@ -43,8 +42,7 @@ const Form = (props) => {
          Switch(word) )) : <p>Please select a story</p>}
 
        <button id="submit"
-               type="button"
-               onClick={(e) => {handleFormSubmit(e)}}>Make My Story!</button>
+               type="submit">Make My Story!</button>
 
      </form>
 
