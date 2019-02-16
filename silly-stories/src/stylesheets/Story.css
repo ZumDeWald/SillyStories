@@ -7,7 +7,7 @@
   grid-row: r4 / r5;
   width: 100%;
   margin: 1.2em 0;
-  padding: 0 0.3em;
+  padding: 0 1em;
   box-sizing: border-box;
   z-index: 1;
 }
@@ -30,6 +30,7 @@ span {
   opacity: 0;
   padding: 0;
   margin: 0;
+  font-size: 1.2em;
   transition-duration: 500ms;
 }
 

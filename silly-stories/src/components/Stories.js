@@ -1,8 +1,73 @@
+import React from 'react';
+
+  const revealStory = () => {
+    const spans = document.getElementsByTagName("span");
+    for (let i=0; i < spans.length; i++) {
+      spans[i].classList.toggle("visible");
+    };
+  }
 
 const Stories = [
-  ["About Me", `Hello, my name is <input className="input" type="text" name="properName1" placeholder="[proper name]" maxLength="25" required /> ! I have a <input className="input" type="text" name="noun1" placeholder="[noun]" maxLength="25" required /> , <input className="input" type="text" name="num1" placeholder="[number]" maxLength="25" required /> <input className="input" type="text" name="noun2" placeholder="[noun]" maxLength="25" required /> 's, and a <input className="input" type="text" name="noun3" placeholder="[noun]" maxLength="25" required /> . My biggest focus lately has been my <input className="input" type="text" name="noun4" placeholder="[noun]" maxLength="25" required /> . <input className="input" type="text" name="verb1" placeholder="[verb]" maxLength="25" required /> over <input className="input" type="text" name="num2" placeholder="[number]" maxLength="25" required /> hours a day has kept me <input className="input" type="text" name="adj1" placeholder="[adjective]" maxLength="25" required /> . Hopefully my <input className="input" type="text" name="adj2" placeholder="[adjective]" maxLength="25" required /> skills in <input className="input" type="text" name="skill1" placeholder="[a skill]" maxLength="25" required /> will get me a new <input className="input" type="text" name="noun5" placeholder="[noun]" maxLength="25" required /> . My <input className="input" type="text" name="fam1" placeholder="[sister/brother/etc]" maxLength="25" required /> thinks I am <input className="input" type="text" name="feel1" placeholder="[feeling (happy, etc)]" maxLength="25" required /> and should be <input className="input" type="text" name="verb2" placeholder="[verb]" maxLength="25" required /> instead.`],
+  ["About Me",
+   <section>
+     <span>Hello, my name is </span>
+     <input className="input" type="text" name="properName1" placeholder="[proper name]" maxLength="25" required />
+     <span>! I have a </span>
+     <input className="input" type="text" name="noun1" placeholder="[noun]" maxLength="25" required />
+     <span>, </span>
+     <input className="input" type="text" name="num1" placeholder="[number]" maxLength="25" required />
+     <input className="input" type="text" name="noun2" placeholder="[noun]" maxLength="25" required />
+     <span>'s, and a(n) </span>
+     <input className="input" type="text" name="noun3" placeholder="[noun]" maxLength="25" required />
+     <span>. My biggest focus lately has been my </span>
+     <input className="input" type="text" name="noun4" placeholder="[noun]" maxLength="25" required />
+     <span>. </span>
+     <input className="input" type="text" name="verb1" placeholder="[verb]" maxLength="25" required />
+     <span>ing over </span>
+     <input className="input" type="text" name="num2" placeholder="[number]" maxLength="25" required />
+     <span>hours a day has kept me </span>
+     <input className="input" type="text" name="adj1" placeholder="[adjective]" maxLength="25" required />
+     <span>. Hopefully my </span>
+     <input className="input" type="text" name="adj2" placeholder="[adjective]" maxLength="25" required />
+     <span>skills in </span>
+     <input className="input" type="text" name="skill1" placeholder="[a skill]" maxLength="25" required />
+     <span>will get me a new </span>
+     <input className="input" type="text" name="noun5" placeholder="[noun]" maxLength="25" required />
+     <span>. My sister thinks I am </span>
+     <input className="input" type="text" name="adj3" placeholder="[adjective]" maxLength="25" required />
+     <span>and should </span>
+     <input className="input" type="text" name="verb2" placeholder="[verb]" maxLength="25" required />
+     <span>instead.</span>
+     <button id="revealStory"
+             onClick={revealStory}>Reveal my story!
+     </button>
+   </section>
+  ],
 
-  ["Favorite Game", `My favorite game has _num1 _noun1 s, _num2 _noun2 s, and a very _adj1 _noun3 ! You can play it with your _fam1 , or a friend. Don't _verb1 too close to the _adj2 _noun4 or you're _adv1 out!`]
+  ["Favorite Game",
+   <section>
+     <span>My favorite game has </span>
+     <input className="input" type="text" name="num1" placeholder="[number]" maxLength="25" required />
+     <input className="input" type="text" name="noun1" placeholder="[noun]" maxLength="25" required /> 's,
+     <input className="input" type="text" name="num2" placeholder="[number]" maxLength="25" required />
+     <input className="input" type="text" name="noun2" placeholder="[noun]" maxLength="25" required /> 's
+     <span>, and a very </span>
+     <input className="input" type="text" name="adj1" placeholder="[adjective]" maxLength="25" required />
+     <input className="input" type="text" name="noun3" placeholder="[noun]" maxLength="25" required />
+     <span>! You can play it with your </span>
+     <input className="input" type="text" name="fam1" placeholder="[family member]" maxLength="25" required />
+     <span>, or a friend. Don't </span>
+     <input className="input" type="text" name="verb1" placeholder="[verb]" maxLength="25" required />
+     <span>too close to the </span>
+     <input className="input" type="text" name="adj2" placeholder="[adjective]" maxLength="25" required />
+     <input className="input" type="text" name="noun4" placeholder="[noun]" maxLength="25" required />
+     <span>or you're </span>
+     <input className="input" type="text" name="adv1" placeholder="[adverb]" maxLength="25" required />
+     <span>out!</span>
+    <button id="revealStory"
+            onClick={revealStory}>Reveal my story!
+    </button>
+  </section>]
 ]
 
 export default Stories;
