@@ -19,10 +19,13 @@
 
 .menu-icon {
   position: absolute;
-  right: -25px;
-  top: 5px;
-  font-size: 1.2em;
-  color: var(--color-main);
+  right: -40px;
+  top: -15px;
+  font-size: 2em;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  box-shadow: -1px 3px 15px #000;
   transform: rotate(90deg);
   transition-duration: 300ms;
 }
