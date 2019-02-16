@@ -48,15 +48,6 @@ const Menu = (props) => {
             onClick={mainMenu}>
           Main Menu
         </li>
-        <li className="menu-item">
-          Option 2
-        </li>
-        <li className="menu-item">
-          Option 3
-        </li>
-        <li className="menu-item">
-          Option 4
-        </li>
         {Stories.map((story, index) => (
           <li className="menu-item"
               onClick={() => {changeStory(story)}}
