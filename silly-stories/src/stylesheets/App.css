@@ -33,7 +33,7 @@ video {
 #top-level-container {
   display: grid;
   grid-template-columns: [c1] 100% [c2];
-  grid-template-rows: [r1] 80px [r2] 100px [r3] 1fr [r4];
+  grid-template-rows: [r1] 80px [r2] 20px [r3] 1fr [r4];
   width: 100%;
   margin: 0;
   padding: 0;
@@ -55,6 +55,7 @@ video {
   color: #fff;
   font-family: var(--font-header);
   font-size: 2em;
+  z-index: 1;
 }
 
 .flex-col-center {

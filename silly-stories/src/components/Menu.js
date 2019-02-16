@@ -17,14 +17,19 @@ const Menu = (props) => {
 
   const toggleMenu = (menuState) => {
     const grabMenu = document.getElementById("menu");
+    const grabList = document.getElementsByTagName("ul");
     const grabIcon = document.getElementsByClassName("menu-icon");
     if (menuState === "close") {
       grabMenu.classList.add("closed");
-      grabIcon[0].classList.add("rotate-90");
+      grabMenu.classList.remove("open");
+      grabList[0].classList.add("hidden");
+      grabIcon[0].classList.remove("rotate-90");
       setMenuChange(false);
     } else {
       grabMenu.classList.remove("closed");
-      grabIcon[0].classList.remove("rotate-90");
+      grabMenu.classList.add("open");
+      grabList[0].classList.remove("hidden");
+      grabIcon[0].classList.add("rotate-90");
       setMenuChange(true);
     }
   }
@@ -40,10 +45,10 @@ const Menu = (props) => {
   }
 
   return (
-    <section id="menu" className="">
-    <i className="fas fa-chevron-circle-down menu-icon"
-       onClick={() => {changeMenuState()}}></i>
-      <ul className="menu-list">
+    <section id="menu" className="flex-col-center closed">
+      <i className="fas fa-chevron-circle-down menu-icon"
+         onClick={() => {changeMenuState()}}></i>
+       <ul className="menu-list hidden">
         <li className="menu-item"
             onClick={mainMenu}>
           Main Menu
