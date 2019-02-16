@@ -40,6 +40,7 @@
   margin: 0;
   list-style: none;
   color: #fff;
+  overflow-y: scroll;
   transition-duration: 300ms;
 }
 
