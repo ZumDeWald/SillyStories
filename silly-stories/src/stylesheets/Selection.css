@@ -4,7 +4,7 @@
 #selection {
   position: relative;
   grid-column: c1 / c2;
-  grid-row: r2 / r4;
+  grid-row: r3 / r4;
   display: grid;
   grid-template-columns: [sc1] 1fr [sc2];
   grid-template-rows: [sr1] 50px [sr2] 1fr [sr3];

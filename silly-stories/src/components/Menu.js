@@ -40,8 +40,8 @@ const Menu = (props) => {
   }
 
   return (
-    <section id="menu" className="closed">
-    <i className="fas fa-chevron-circle-down menu-icon rotate-90"
+    <section id="menu" className="">
+    <i className="fas fa-chevron-circle-down menu-icon"
        onClick={() => {changeMenuState()}}></i>
       <ul className="menu-list">
         <li className="menu-item"
