@@ -26,7 +26,8 @@
   align-self: flex-start;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, 80px);
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-flow: dense;
   width: 100%;
   margin-top: 1em;
 }
@@ -35,4 +36,6 @@
   padding: 0.2em;
   margin: 0;
   text-align: center;
+  border: 2px solid var(--color-main);
+  border-radius: 0.7em;
 }
