@@ -3,7 +3,7 @@ import React from 'react';
 const Switch = (word) => {
 
   switch(word) {
-    case "_propName" :
+    case "{_propName}" :
       return <input className="input" type="text" key={word} name={word} placeholder="[proper name]" maxLength="25" required />;
 
     case "_noun1" :
