@@ -24,6 +24,7 @@ video {
 :root {
   --color-main: #DC0000;
   --color-light: #FF3333;
+  --color-second: #1ECA1E;
   --font-main: 'IBM Plex Sans', sans-serif;
   --font-header: 'Raleway', sans-serif;
 }
