@@ -18,7 +18,7 @@ input {
   padding: 0;
   margin: 0 0.2em;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1.2em;
   border-bottom: 1px solid #000;
   border-top: none;
   border-left: none;
@@ -27,27 +27,35 @@ input {
 
 span {
   display: inline;
+  position: relative;
+  bottom: -10px;
   opacity: 0;
   padding: 0;
   margin: 0;
   font-size: 1.2em;
-  transition-duration: 500ms;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
 }
 
 button {
   display: block;
-  margin: 1em 0;
+  margin: 3em 0;
+  font-size: 1.2em;
   background-color: #fff;
   border: 2px solid var(--color-main);
   border-radius: 0.3em;
 }
 
+.story {
+  line-height: 2em;
+}
+
 .directions {
   width: 300px;
-  padding: 0 0.3em;
+  padding: 0 0.4em;
   margin: 0;
   font-family: var(--font-header);
-  font-size: 1.2em;
+  font-size: 1.5em;
   line-height: 1.5em;
   border-left: 2px solid var(--color-second);
 }
@@ -58,4 +66,5 @@ button {
 
 .visible {
   opacity: 1.0;
+  bottom: 0;
 }
