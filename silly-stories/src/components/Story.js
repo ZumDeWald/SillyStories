@@ -11,6 +11,7 @@ const Story = (props) => {
       <p className="directions">Reveal new story</p>
       <h3 className="chosenStory">/ / {chosenStory[0]}</h3>
       {chosenStory[1]}
+      <h4><em>*Unsure what an adjective is? Check the Glossary in the menu</em></h4>
     </section>
   );
 }

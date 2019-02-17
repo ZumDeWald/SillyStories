@@ -12,7 +12,7 @@ const Selection = (props) => {
       <ul className="no-list-style selection-list">
         {Stories.map((story, index) => (
           <li className="selection-list-item flex-col-center hover-hand"
-              onClick={() => {handleSetStory(story)}}
+              onClick={() => {handleSetStory(story, "Story")}}
               key={index}>
             {story[0]}
           </li>

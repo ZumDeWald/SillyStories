@@ -34,13 +34,13 @@ const Menu = (props) => {
     }
   }
 
-  const mainMenu = () => {
-    resetStory();
+  const mainMenu = (component) => {
+    resetStory(component);
     changeMenuState();
   }
 
-  const changeStory = (story) => {
-    handleSetStory(story);
+  const changeStory = (story, component) => {
+    handleSetStory(story, component);
     changeMenuState();
   }
 
@@ -50,12 +50,16 @@ const Menu = (props) => {
          onClick={() => {changeMenuState()}}></i>
        <ul className="menu-list hidden">
         <li className="menu-item hover-hand"
-            onClick={mainMenu}>
+            onClick={() => {mainMenu("Selection")}}>
           Main Menu
+        </li>
+        <li className="menu-item hover-hand"
+            onClick={() => {mainMenu("Glossary")}}>
+          Glossary
         </li>
         {Stories.map((story, index) => (
           <li className="menu-item hover-hand"
-              onClick={() => {changeStory(story)}}
+              onClick={() => {changeStory(story, "Story")}}
               key={index}>
             {story[0]}
           </li>

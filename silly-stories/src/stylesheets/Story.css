@@ -27,7 +27,7 @@
   margin: 2em 0 1em 0;
 }
 
-span {
+.story-words{
   display: inline;
   position: relative;
   bottom: -10px;
