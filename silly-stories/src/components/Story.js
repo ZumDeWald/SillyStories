@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Story = (props) => {
 
   //Destructuring
   const { chosenStory } = props;
+
+  useEffect(() => {
+    const spans = document.getElementsByClassName("story-words");
+    for (let i=0; i < spans.length; i++) {
+      spans[i].classList.remove("visible");
+    };
+    const inputs = document.getElementsByClassName("input");
+    for (let i=0; i < inputs.length; i++) {
+      inputs[i].value = "";
+    };
+  })
 
   return (
     <section id="story">
