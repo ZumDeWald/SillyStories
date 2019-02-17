@@ -43,7 +43,6 @@ video {
 
 /* Common styling */
 
-
 .App-header {
   grid-column: c1 / c2;
   grid-row: r1 / r2;

@@ -6,7 +6,8 @@
   grid-column: c1 / c2;
   grid-row: r3 / r4;
   width: 100%;
-  margin: 1.2em 0;
+  max-width: 600px;
+  margin: 1.2em auto;
   padding: 0 1em;
   box-sizing: border-box;
   z-index: 1;
