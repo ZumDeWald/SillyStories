@@ -46,15 +46,15 @@ const Menu = (props) => {
 
   return (
     <section id="menu" className="flex-col-center closed">
-      <i className="fas fa-chevron-circle-down menu-icon"
+      <i className="fas fa-chevron-circle-down menu-icon hover-hand"
          onClick={() => {changeMenuState()}}></i>
        <ul className="menu-list hidden">
-        <li className="menu-item"
+        <li className="menu-item hover-hand"
             onClick={mainMenu}>
           Main Menu
         </li>
         {Stories.map((story, index) => (
-          <li className="menu-item"
+          <li className="menu-item hover-hand"
               onClick={() => {changeStory(story)}}
               key={index}>
             {story[0]}

@@ -11,7 +11,7 @@ const Selection = (props) => {
       <h3 className="header-text bottom-line selection-header">Choose your adventure</h3>
       <ul className="no-list-style selection-list">
         {Stories.map((story, index) => (
-          <li className="selection-list-item flex-col-center"
+          <li className="selection-list-item flex-col-center hover-hand"
               onClick={() => {handleSetStory(story)}}
               key={index}>
             {story[0]}

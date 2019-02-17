@@ -79,3 +79,7 @@ video {
 .bottom-line {
   border-bottom: 1px solid #000;
 }
+
+.hover-hand:hover {
+  cursor: pointer;
+}

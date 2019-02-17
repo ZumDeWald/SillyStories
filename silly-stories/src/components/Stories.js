@@ -17,7 +17,7 @@ const Stories = [
      <span>, </span>
      <input className="input" type="text" name="num1" placeholder="number" maxLength="25" required />
      <input className="input" type="text" name="noun2" placeholder="noun" maxLength="25" required />
-     <span>'s, and a(n) </span>
+     <span>&apos;s, and a(n) </span>
      <input className="input" type="text" name="noun3" placeholder="noun" maxLength="25" required />
      <span>. My biggest focus lately has been my </span>
      <input className="input" type="text" name="noun4" placeholder="noun" maxLength="25" required />
@@ -38,7 +38,7 @@ const Stories = [
      <span>and should </span>
      <input className="input" type="text" name="verb2" placeholder="verb" maxLength="25" required />
      <span>instead.</span>
-     <button id="revealStory"
+     <button id="revealStory" className="hover-hand"
              onClick={revealStory}>Reveal my story!
      </button>
    </section>
@@ -49,15 +49,15 @@ const Stories = [
      <span>My favorite game has </span>
      <input className="input" type="text" name="num1" placeholder="number" maxLength="25" required />
      <input className="input" type="text" name="noun1" placeholder="noun" maxLength="25" required />
-     <span>'s, </span>
+     <span>&apos;s, </span>
      <input className="input" type="text" name="num2" placeholder="number" maxLength="25" required />
      <input className="input" type="text" name="noun2" placeholder="noun" maxLength="25" required />
-     <span>'s, and a very </span>
+     <span>&apos;s, and a very </span>
      <input className="input" type="text" name="adj1" placeholder="adjective" maxLength="25" required />
      <input className="input" type="text" name="noun3" placeholder="noun" maxLength="25" required />
      <span>! You can play it with </span>
      <input className="input" type="text" name="name1" placeholder="name" maxLength="25" required />
-     <span>, or your mother. Don't </span>
+     <span>, or your mother. Don&apos;t </span>
      <input className="input" type="text" name="verb1" placeholder="verb" maxLength="25" required />
      <span>too close to the </span>
      <input className="input" type="text" name="adj2" placeholder="adjective" maxLength="25" required />
@@ -65,7 +65,7 @@ const Stories = [
      <span>or you're </span>
      <input className="input" type="text" name="adv1" placeholder="adverb" maxLength="25" required />
      <span>out!</span>
-     <button id="revealStory"
+     <button id="revealStory" className="hover-hand"
              onClick={revealStory}>Reveal my story!
      </button>
    </section>
