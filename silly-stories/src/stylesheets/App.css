@@ -24,6 +24,7 @@ video {
 :root {
   --color-main: #DC0000;
   --color-light: #FF3333;
+  --color-second: #1ECA1E;
   --font-main: 'IBM Plex Sans', sans-serif;
   --font-header: 'Raleway', sans-serif;
 }
@@ -33,7 +34,7 @@ video {
 #top-level-container {
   display: grid;
   grid-template-columns: [c1] 100% [c2];
-  grid-template-rows: [r1] 80px [r2] 100px [r3] 1fr [r4];
+  grid-template-rows: [r1] 80px [r2] 20px [r3] 1fr [r4];
   width: 100%;
   margin: 0;
   padding: 0;
@@ -41,7 +42,6 @@ video {
 
 
 /* Common styling */
-
 
 .App-header {
   grid-column: c1 / c2;
@@ -55,6 +55,7 @@ video {
   color: #fff;
   font-family: var(--font-header);
   font-size: 2em;
+  z-index: 1;
 }
 
 .flex-col-center {
@@ -77,4 +78,8 @@ video {
 
 .bottom-line {
   border-bottom: 1px solid #000;
+}
+
+.hover-hand:hover {
+  cursor: pointer;
 }
