@@ -1,12 +1,5 @@
 import React from 'react';
 
-  const revealStory = () => {
-    const spans = document.getElementsByClassName("story-words");
-    for (let i=0; i < spans.length; i++) {
-      spans[i].classList.toggle("visible");
-    };
-  }
-
 const Stories = [
   ["About Me",
    <section className="story">
@@ -38,9 +31,6 @@ const Stories = [
      <span className="story-words">and should </span>
      <input className="input" type="text" name="verb2" placeholder="verb" maxLength="25" required />
      <span className="story-words">instead.</span>
-     <button id="revealStory" className="hover-hand"
-             onClick={revealStory}> Reveal my story!
-     </button>
    </section>
   ],
 
@@ -65,9 +55,6 @@ const Stories = [
      <span className="story-words">or you're </span>
      <input className="input" type="text" name="adv1" placeholder="adverb" maxLength="25" required />
      <span className="story-words">out!</span>
-     <button id="revealStory" className="hover-hand"
-             onClick={revealStory}>Reveal my story!
-     </button>
    </section>
   ],
 
@@ -86,9 +73,6 @@ const Stories = [
      <span className="story-words"> very </span>
      <input className="input" type="text" name="adv1" placeholder="adverb" maxLength="25" required />
      <span className="story-words">!</span>
-     <button id="revealStory" className="hover-hand"
-             onClick={revealStory}>Reveal my story!
-     </button>
    </section>
   ]
 ]

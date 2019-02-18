@@ -24,12 +24,14 @@ class App extends Component {
 
   }
 
+  //Set state to selected story and render chosen component.
   setStory = (newStory, component) => {
     this.setState({ story : newStory });
     this.setState({ display: component });
   }
 
-  resetStory = (component) => {
+  //Set state to chosen component, this updates which component is rendered.
+  changeDisplay = (component) => {
     this.setState({ display: component });
   }
 
@@ -42,8 +44,9 @@ class App extends Component {
             Silly Stories
           </p>
         </header>
-        <Menu resetStory={this.resetStory}
+        <Menu handleChangeDisplay={this.changeDisplay}
               handleSetStory={this.setStory} />
+            {/* Ternary with multiple options. Checks state for which component to render. */}
             {(this.state.display === "Selection") ?
             <Selection handleSetStory={this.setStory} />
           :
@@ -52,8 +55,9 @@ class App extends Component {
           :
             (this.state.display === "Glossary") ?
             <Glossary />
-          : <p>Nothing to display</p>
-        }
+          : <p>Please choose a story or Glossary</p>
+            }
+        {/* End of Ternary */}
       </main>
     );
   }
