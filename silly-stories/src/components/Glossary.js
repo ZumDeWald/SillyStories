@@ -2,8 +2,6 @@ import React from 'react';
 
 const Glossary = (props) => {
 
-  //Destructuring
-
   return (
     <section id="glossary">
       <p className="header">Glossary</p>
