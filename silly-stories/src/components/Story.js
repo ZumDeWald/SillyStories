@@ -29,16 +29,16 @@ const Story = (props) => {
     };
   }
 
-  const test = (word) => {
-    return Switch({word});
-  }
+  // const test = (word) => {
+  //   return Switch({word});
+  // }
 
   return (
     <section id="story">
       <p className="directions">Fill in spaces</p>
       <p className="directions">Reveal new story</p>
       <h3 className="chosenStory">/ / {chosenStory[0]}</h3>
-      <p>This is a {test("_noun1")}</p>
+      {Switch("_noun1")}
       <button id="revealStory" className="hover-hand"
               onClick={revealStory}> Reveal my story!
       </button>

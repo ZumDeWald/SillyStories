@@ -1,10 +1,9 @@
-import { React } from 'react';
 
-const Switch = (props) => {
+const Switch = (word) => {
 
   /* Switch statement will return JSX based on the type of trigger handed to it */
 
-    switch(props.word) {
+    switch(word) {
       case "_name" :
         return `</span><input className="input" type="text" name="name1" placeholder="name" maxlength="25" required /><span className="story-words">`;
 
@@ -12,7 +11,7 @@ const Switch = (props) => {
         return `</span><input className="input" type="text" name="name2" placeholder="name" maxlength="25" required /><span className="story-words">`;
 
       case "_noun1" :
-        return <input className="input" type="text" name="noun1" placeholder="noun" maxlength="20" required />;
+        return `<input className="input" type="text" name="noun1" placeholder="noun" maxlength="20" required />`;
 
       case "_noun2" :
         return `</span><input className="input" type="text" name="noun2" placeholder="noun" maxlength="20" required /><span className="story-words">`;
