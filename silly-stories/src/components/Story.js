@@ -38,7 +38,7 @@ const Story = (props) => {
         return <input className="input" type="text" key={index} placeholder={newWord} maxLength="25" required />;
       } else {
         let addSpace = word.concat(" ");
-        return <span className="story-words">{addSpace}</span>;
+        return <span className="story-words" key={index}>{addSpace}</span>;
       }
     });
     let storyJoined = storyParsed.concat();
