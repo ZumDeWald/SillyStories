@@ -27,12 +27,36 @@ const Story = (props) => {
     };
   }
 
+
+  //Parse story on render
+  const parseStory = (story) => {
+    const underScore = RegExp("_");
+    let storyArray = story.split(" ");
+    let storyParsed = storyArray.map( (word, index) => {
+      if (!!underScore.test(word)) {
+        let newWord = word.replace(/[_]/, "");
+        return <input className="input" type="text" key={index} placeholder={newWord} maxLength="25" required />;
+      } else {
+        let addSpace = word.concat(" ");
+        return addSpace;
+      }
+    });
+    let storyJoined = storyParsed.concat();
+    return storyJoined
+  }
+
+  let story = parseStory(chosenStory[1]);
+
   return (
-    <section id="story">
+    <section id="story-area">
       <p className="directions">Fill in spaces</p>
       <p className="directions">Reveal new story</p>
       <h3 className="chosenStory">/ / {chosenStory[0]}</h3>
-      {chosenStory[1]}
+        <section className="story">
+          <span className="story-words">
+            {story}
+          </span>
+        </section>
       <button id="revealStory" className="hover-hand"
               onClick={revealStory}> Reveal my story!
       </button>

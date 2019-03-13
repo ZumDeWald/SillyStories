@@ -1,7 +1,7 @@
 /* Import variables and general style */
 @import 'App.css';
 
-#story {
+#story-area {
   position: relative;
   grid-column: c1 / c2;
   grid-row: r3 / r4;
