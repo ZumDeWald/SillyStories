@@ -38,7 +38,7 @@ const Story = (props) => {
         return <input className="input" type="text" key={index} placeholder={newWord} maxLength="25" required />;
       } else {
         let addSpace = word.concat(" ");
-        return addSpace;
+        return <span className="story-words" key={index}>{addSpace}</span>;
       }
     });
     let storyJoined = storyParsed.concat();
@@ -53,9 +53,7 @@ const Story = (props) => {
       <p className="directions">Reveal new story</p>
       <h3 className="chosenStory">/ / {chosenStory[0]}</h3>
         <section className="story">
-          <span className="story-words">
             {story}
-          </span>
         </section>
       <button id="revealStory" className="hover-hand"
               onClick={revealStory}> Reveal my story!
