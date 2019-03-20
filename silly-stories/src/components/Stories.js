@@ -10,6 +10,10 @@ const Stories = [
 
   ["Inventions",
      "Did you know that the _noun was invented by _name ? They spent $ _number developing a new _adjective feature that can _verb very _adverb !"
+  ],
+
+  ["Monster",
+     "Have you met my monster _name ? He has _number heads and smells like _noun (s). _verb ing all day with his _adjective tail is the best! His spots are _color and his teeth are _adjective . Maybe he should _verb them more often! His favorite toy is a(n) _adjective _noun . He is _feeling to meet you!"
   ]
 ]
 
