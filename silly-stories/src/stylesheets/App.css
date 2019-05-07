@@ -22,11 +22,11 @@ video {
 
 /* Global variables */
 :root {
-  --color-main: #DC0000;
-  --color-light: #FF3333;
-  --color-second: #1ECA1E;
-  --font-main: 'IBM Plex Sans', sans-serif;
-  --font-header: 'Raleway', sans-serif;
+  --color-main: #dc0000;
+  --color-light: #ff3333;
+  --color-second: #1eca1e;
+  --font-main: "IBM Plex Sans", sans-serif;
+  --font-header: "Raleway", sans-serif;
 }
 
 /* Setup Grid on top level div */
@@ -40,7 +40,6 @@ video {
   padding: 0;
 }
 
-
 /* Common styling */
 
 .App-header {
@@ -51,7 +50,11 @@ video {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: radial-gradient(circle at 50%, var(--color-light), var(--color-main));
+  background: radial-gradient(
+    circle at 50%,
+    var(--color-light),
+    var(--color-main)
+  );
   color: #fff;
   font-family: var(--font-header);
   font-size: 2em;
@@ -83,9 +86,6 @@ video {
 .hover-hand:hover {
   cursor: pointer;
 }
-
-
-
 
 /*
     We are the Music Makers,
