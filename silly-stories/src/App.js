@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 //Components
 import Menu from "./components/Menu.js";
@@ -58,5 +59,10 @@ class App extends Component {
     );
   }
 }
+
+/* PROPTYPES */
+App.propTypes = {
+  setStory: PropTypes.func
+};
 
 export default App;
