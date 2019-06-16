@@ -1,0 +1,71 @@
+/* Import variables and general style */
+@import "App.css";
+
+#story-area {
+  position: relative;
+  grid-column: c1 / c2;
+  grid-row: r3 / r4;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.2em auto;
+  padding: 0 1em;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.directions {
+  width: 300px;
+  padding: 0 0.4em;
+  margin: 0;
+  font-family: var(--font-header);
+  font-size: 1.5em;
+  line-height: 1.5em;
+  border-left: 2px solid var(--color-second);
+}
+
+.chosenStory {
+  margin: 2em 0 1em 0;
+}
+
+.story-words {
+  display: inline;
+  position: relative;
+  bottom: -10px;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+}
+
+input {
+  display: inline;
+  width: 95px;
+  padding: 0;
+  margin: 0 0.2em;
+  text-align: center;
+  font-size: 1.2em;
+  border-bottom: 1px solid #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+button {
+  display: block;
+  margin: 3em 0;
+  font-size: 1.2em;
+  background-color: #fff;
+  border: 2px solid var(--color-main);
+  border-radius: 0.3em;
+}
+
+.story {
+  line-height: 2.2em;
+}
+
+.visible {
+  opacity: 1;
+  bottom: 0;
+}
