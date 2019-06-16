@@ -1,52 +1,52 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from 'react';
 
 const Story = props => {
   //Destructuring
-  const { chosenStory } = props;
+  const {chosenStory} = props;
 
   /* React Effect Hook that will run every render. */
   useEffect(() => {
     //Hide all spans on render
-    const spans = document.getElementsByClassName("story-words");
+    const spans = document.getElementsByClassName('story-words');
     for (let i = 0; i < spans.length; i++) {
-      spans[i].classList.remove("visible");
+      spans[i].classList.remove('visible');
     }
     //Clear all input fields on render
-    const inputs = document.getElementsByClassName("input");
+    const inputs = document.getElementsByClassName('input');
     for (let i = 0; i < inputs.length; i++) {
-      inputs[i].value = "";
+      inputs[i].value = '';
     }
   });
 
   //Show spans on button click
   const revealStory = () => {
-    const spans = document.getElementsByClassName("story-words");
+    const spans = document.getElementsByClassName('story-words');
     for (let i = 0; i < spans.length; i++) {
-      spans[i].classList.toggle("visible");
+      spans[i].classList.toggle('visible');
     }
   };
 
   //Parse story on render
   const parseStory = story => {
-    const underScore = RegExp("_");
-    let storyArray = story.split(" ");
+    const underScore = RegExp('_');
+    let storyArray = story.split(' ');
     let storyParsed = storyArray.map((word, index) => {
       if (!!underScore.test(word)) {
-        let newWord = word.replace(/[_]/, "");
+        let newWord = word.replace(/[_]/, '');
         return (
           <input
-            className="input"
-            type="text"
+            className='input'
+            type='text'
             key={index}
             placeholder={newWord}
-            maxLength="25"
+            maxLength='25'
             required
           />
         );
       } else {
-        let addSpace = word.concat(" ");
+        let addSpace = word.concat(' ');
         return (
-          <span className="story-words" key={index}>
+          <span className='story-words' key={index}>
             {addSpace}
           </span>
         );
@@ -59,13 +59,13 @@ const Story = props => {
   let story = parseStory(chosenStory[1]);
 
   return (
-    <section id="story-area">
-      <p className="directions">Fill in spaces</p>
-      <p className="directions">Reveal new story</p>
-      <h3 className="chosenStory">/ / {chosenStory[0]}</h3>
-      <section className="story">{story}</section>
-      <button id="revealStory" className="hover-hand" onClick={revealStory}>
-        {" "}
+    <section id='story-area'>
+      <p className='directions'>Fill in spaces</p>
+      <p className='directions'>Reveal new story</p>
+      <h3 className='chosenStory'>/ / {chosenStory[0]}</h3>
+      <section className='story'>{story}</section>
+      <button id='revealStory' className='hover-hand' onClick={revealStory}>
+        {' '}
         Reveal my story!
       </button>
       <h4>
