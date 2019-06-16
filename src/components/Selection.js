@@ -1,26 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import Stories from "./Stories.js";
+import Stories from './Stories.js';
 
 const Selection = props => {
   //Destructuring
-  const { handleSetStory } = props;
+  const {handleSetStory} = props;
 
   return (
-    <section id="selection" className="flex-col-center">
-      <h3 className="header-text bottom-line selection-header">
+    <section id='selection' className='flex-col-center'>
+      <h3 className='header-text bottom-line selection-header'>
         Choose your adventure
       </h3>
-      <ul className="no-list-style selection-list">
+      <ul className='no-list-style selection-list'>
         {/* Map over all stories in Stories array and add each to Selection */}
         {Stories.map((story, index) => (
           <li
-            className="selection-list-item flex-col-center hover-hand"
+            className='selection-list-item flex-col-center hover-hand'
             onClick={() => {
-              handleSetStory(story, "Story");
+              handleSetStory(story, 'Story');
             }}
-            key={index}
-          >
+            key={index}>
             {story[0]}
           </li>
         ))}
