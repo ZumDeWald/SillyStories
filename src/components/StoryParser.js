@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
 const StoryParser = story => {
-  const underScore = RegExp("_");
-  let storyArray = story.split(" ");
+  const underScore = RegExp('_');
+  let storyArray = story.split(' ');
   let storyParsed = storyArray.map(word => {
     if (!!underScore.test(word)) {
-      let newWord = word.replace(/[_]/, "");
+      let newWord = word.replace(/[_]/, '');
       return (
         <input
-          className="input"
-          type="text"
+          className='input'
+          type='text'
           name={newWord}
-          placeholder="a skill"
-          maxLength="25"
+          placeholder='a skill'
+          maxLength='25'
           required
         />
       );
@@ -20,7 +20,7 @@ const StoryParser = story => {
       return word;
     }
   });
-  let storyJoined = storyParsed.join(" ");
+  let storyJoined = storyParsed.join(' ');
   return storyJoined;
 };
 
