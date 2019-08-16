@@ -13,9 +13,12 @@ const Glossary = props => {
         &nbsp; A class of words that modify nouns and pronouns, primarily by
         describing a particular quality of the word they are modifying. <br />{' '}
         <br />
-        <strong>Example: </strong> Greg is a{' '}
-        <span className='green'>funny</span>,{' '}
-        <span className='green'>quiet</span> person.
+        <strong>Example: </strong>
+        <em>
+          {' '}
+          Greg is a <span className='green'>funny</span>,{' '}
+          <span className='green'>quiet</span> person.
+        </em>
       </p>
 
       <p className='definition'>
@@ -26,10 +29,13 @@ const Glossary = props => {
         &nbsp; A word or phrase that modifies or qualifies an adjective, verb,
         or other adverb, expressing a relation of place, time, circumstance,
         manner, cause, degree, etc. <br /> <br />
-        <strong>Example: </strong> Sara moved{' '}
-        <span className='green'>quickly</span> across the playground,{' '}
-        <span className='green'>then</span> slowed{' '}
-        <span className='green'>quite rapidly</span>.
+        <strong>Example: </strong>
+        <em>
+          {' '}
+          Sara moved <span className='green'>quickly</span> across the
+          playground, <span className='green'>then</span> slowed{' '}
+          <span className='green'>quite rapidly</span>.
+        </em>
       </p>
 
       <p className='definition'>
@@ -40,9 +46,13 @@ const Glossary = props => {
         &nbsp; A word (other than a pronoun) used to identify any of a class of
         people, places, or things ( common noun ), or to name a particular one
         of these ( proper noun ). <br /> <br />
-        <strong>Example: </strong> <span className='green'>Harriet</span> had a{' '}
-        <span className='green'>taco</span> for{' '}
-        <span className='green'>lunch</span>.
+        <strong>Example: </strong>
+        <em>
+          {' '}
+          <span className='green'>Harriet</span> had a{' '}
+          <span className='green'>taco</span> for{' '}
+          <span className='green'>lunch</span>.
+        </em>
       </p>
 
       <p className='definition'>
@@ -52,8 +62,12 @@ const Glossary = props => {
         <span className='phonetic'> [verb] </span>
         &nbsp; A word used to describe an action, state, or occurrence, and
         forming the main part of the predicate of a sentence. <br /> <br />
-        <strong>Example: </strong> Gary <span className='green'>hurt</span> his
-        knee, but <span className='green'>will recover</span> quickly.
+        <strong>Example: </strong>
+        <em>
+          {' '}
+          Gary <span className='green'>hurt</span> his knee, but{' '}
+          <span className='green'>will recover</span> quickly.
+        </em>
       </p>
 
       <h4>

@@ -26,16 +26,17 @@ video {
   --color-light: #ff3333;
   --color-second: #1eca1e;
   --font-main: 'IBM Plex Sans', sans-serif;
-  --font-header: 'Raleway', sans-serif;
+  --font-header: 'Vesper Libre', serif;
 }
 
 /* Setup Grid on top level div */
 
 #top-level-container {
   display: grid;
-  grid-template-columns: [c1] 100% [c2];
+  grid-template-columns: [c1] 1fr [c2] 6fr [c3] 1fr [c4];
   grid-template-rows: [r1] 80px [r2] 20px [r3] 1fr [r4];
   width: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -43,7 +44,7 @@ video {
 /* Common styling */
 
 .App-header {
-  grid-column: c1 / c2;
+  grid-column: c1 / c4;
   grid-row: r1 / r2;
   display: flex;
   flex-flow: column nowrap;
@@ -57,14 +58,14 @@ video {
   );
   color: #fff;
   font-family: var(--font-header);
-  font-size: 2em;
+  font-size: 35pt;
   z-index: 1;
 }
 
 hr {
   position: absolute;
   top: 0;
-  left: -2.5em;
+  left: -1.5em;
   display: block;
   width: 200px;
   border: 0;

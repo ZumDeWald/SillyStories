@@ -3,7 +3,7 @@
 
 #selection {
   position: relative;
-  grid-column: c1 / c2;
+  grid-column: c2 / c3;
   grid-row: r3 / r4;
   display: grid;
   grid-template-columns: [sc1] 1fr [sc2];
