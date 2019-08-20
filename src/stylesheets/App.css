@@ -25,6 +25,7 @@ video {
   --color-main: #dc0000;
   --color-light: #ff3333;
   --color-second: #1eca1e;
+  --color-lgray: #9b9494;
   --font-main: 'IBM Plex Sans', sans-serif;
   --font-header: 'Vesper Libre', serif;
 }
