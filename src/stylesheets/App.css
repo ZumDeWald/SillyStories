@@ -22,8 +22,8 @@ video {
 
 /* Global variables */
 :root {
-  --color-main: #dc0000;
-  --color-light: #ff3333;
+  --color-main: #ff4e50;
+  --color-m2: #fc913a;
   --color-second: #1eca1e;
   --color-lgray: #9b9494;
   --font-main: 'IBM Plex Sans', sans-serif;
@@ -35,7 +35,7 @@ video {
 #top-level-container {
   display: grid;
   grid-template-columns: [c1] 1fr [c2] 6fr [c3] 1fr [c4];
-  grid-template-rows: [r1] 80px [r2] 20px [r3] 1fr [r4];
+  grid-template-rows: [r1] 100px [r2] 20px [r3] 1fr [r4];
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -52,10 +52,12 @@ video {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: radial-gradient(
-    circle at 50%,
-    var(--color-light),
-    var(--color-main)
+  background: linear-gradient(
+    -35deg,
+    var(--color-m2) 0,
+    var(--color-main) 30%,
+    var(--color-main) 60%,
+    var(--color-m2) 100%
   );
   color: #fff;
   font-family: var(--font-header);

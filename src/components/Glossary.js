@@ -59,7 +59,7 @@ const Glossary = props => {
         <strong>
           <u>verb:</u>
         </strong>
-        <span className='phonetic'> [verb] </span>
+        <span className='phonetic'> [vərb] </span>
         &nbsp; A word used to describe an action, state, or occurrence, and
         forming the main part of the predicate of a sentence. <br /> <br />
         <strong>Example: </strong>

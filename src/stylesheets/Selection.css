@@ -9,7 +9,7 @@
   grid-template-columns: [sc1] 1fr [sc2];
   grid-template-rows: [sr1] 50px [sr2] 1fr [sr3];
   width: 100%;
-  max-width: 400px;
+  max-width: 725px;
   margin: 1.2em auto;
   padding: 0 0.3em;
   box-sizing: border-box;
@@ -38,8 +38,7 @@
   margin: 0;
   text-align: center;
   border: 2px solid var(--color-main);
-  border-radius: 0 0.7em 0.7em 0.7em;
-  transition-duration: 300ms;
+  transition-duration: 100ms;
 }
 
 .selection-list-item:hover {
