@@ -3,13 +3,13 @@
 
 #selection {
   position: relative;
-  grid-column: c1 / c2;
+  grid-column: c2 / c3;
   grid-row: r3 / r4;
   display: grid;
   grid-template-columns: [sc1] 1fr [sc2];
   grid-template-rows: [sr1] 50px [sr2] 1fr [sr3];
   width: 100%;
-  max-width: 400px;
+  max-width: 725px;
   margin: 1.2em auto;
   padding: 0 0.3em;
   box-sizing: border-box;
@@ -27,16 +27,20 @@
   align-self: flex-start;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-auto-flow: dense;
   width: 100%;
   margin-top: 1em;
 }
 
 .selection-list-item {
-  padding: 0.2em;
+  padding: 0.5em 0.2em;
   margin: 0;
   text-align: center;
   border: 2px solid var(--color-main);
-  border-radius: 0.7em;
+  transition-duration: 100ms;
+}
+
+.selection-list-item:hover {
+  box-shadow: 1px 2px 2px 1px var(--color-lgray);
 }

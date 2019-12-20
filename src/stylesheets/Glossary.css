@@ -3,7 +3,7 @@
 
 #glossary {
   position: relative;
-  grid-column: c1 / c2;
+  grid-column: c2 / c3;
   grid-row: r3 / r4;
   width: 100%;
   max-width: 600px;

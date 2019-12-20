@@ -3,10 +3,10 @@
 
 #story-area {
   position: relative;
-  grid-column: c1 / c2;
+  grid-column: c2 / c3;
   grid-row: r3 / r4;
   width: 100%;
-  max-width: 600px;
+  max-width: 725px;
   margin: 1.2em auto;
   padding: 0 1em;
   box-sizing: border-box;
