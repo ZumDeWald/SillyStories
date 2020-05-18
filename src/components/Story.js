@@ -1,9 +1,6 @@
 import React, {useEffect} from 'react';
 
-const Story = props => {
-  //Destructuring
-  const {chosenStory} = props;
-
+const Story = ({handleChangeDisplay, chosenStory}) => {
   /* React Effect Hook that will run every render. */
   useEffect(() => {
     //Hide all spans on render
@@ -26,7 +23,6 @@ const Story = props => {
     }
   };
 
-  //Parse story on render
   const parseStory = story => {
     const underScore = RegExp('_');
     let storyArray = story.split(' ');
@@ -65,11 +61,19 @@ const Story = props => {
       <h3 className='chosenStory'>/ / {chosenStory[0]}</h3>
       <section className='story'>{story}</section>
       <button id='revealStory' className='hover-hand' onClick={revealStory}>
-        {' '}
         Reveal my story!
       </button>
       <h4>
-        <em>*Unsure what an adjective is? Check the Glossary in the menu</em>
+        <em>
+          *Unsure what an adjective is? Check the{' '}
+          <u
+            className='hover-hand'
+            onClick={() => {
+              handleChangeDisplay('Glossary');
+            }}>
+            Glossary
+          </u>
+        </em>
       </h4>
     </section>
   );

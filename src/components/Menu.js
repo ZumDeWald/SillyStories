@@ -2,70 +2,46 @@ import React, {useState} from 'react';
 
 import Stories from './Stories.js';
 
-const Menu = props => {
-  //Destructuring
-  const {handleChangeDisplay, handleSetStory} = props;
-
+const Menu = ({handleChangeDisplay, handleSetStory}) => {
   /* React State Hook used to set wether menu is open and provides a method to change the state */
-  const [menuOpen, setMenuChange] = useState(false);
-
-  /* Toggles menu state between open and closed. Detailed steps in toggleMenu function below */
-  const changeMenuState = () => {
-    !!menuOpen ? toggleMenu('close') : toggleMenu('open');
-  };
-
-  /* Function to open or close the menu depending on which is passed down from changeMenuState function above. This function handles opening/closing the menu box, displaying/hiding the menu options, and rotating the menu icon (arrow). This also updates the state to reflect that the menu is open or closed, so the above function adapts properly. */
-  const toggleMenu = menuState => {
-    const grabMenu = document.getElementById('menu');
-    const grabList = document.getElementsByTagName('ul');
-    const grabIcon = document.getElementsByClassName('menu-icon');
-    if (menuState === 'close') {
-      // Steps to CLOSE the menu
-      grabMenu.classList.add('closed');
-      grabMenu.classList.remove('open');
-      grabList[0].classList.add('hidden');
-      grabIcon[0].classList.remove('rotate-90');
-      setMenuChange(false);
-    } else {
-      // Steps to OPEN the menu
-      grabMenu.classList.remove('closed');
-      grabMenu.classList.add('open');
-      grabList[0].classList.remove('hidden');
-      grabIcon[0].classList.add('rotate-90');
-      setMenuChange(true);
-    }
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   /* Function to switch between which component is displayed and close menu. */
   const changeDisplay = component => {
     handleChangeDisplay(component);
-    changeMenuState();
+    setMenuOpen(false);
   };
 
   /* Function to change the story in state and close menu */
   const changeStory = (story, component) => {
     handleSetStory(story, component);
-    changeMenuState();
+    setMenuOpen(false);
   };
 
   return (
-    <section id='menu' className='flex-col-center closed'>
+    <section
+      id='menu'
+      className={!!menuOpen ? 'flex-col-center' : 'flex-col-center closed'}>
       <i
-        className='fas fa-chevron-circle-down menu-icon hover-hand'
+        className={
+          !!menuOpen
+            ? 'fas fa-chevron-circle-down menu-icon rotate-90'
+            : 'fas fa-chevron-circle-down menu-icon'
+        }
         onClick={() => {
-          changeMenuState();
+          !!menuOpen ? setMenuOpen(false) : setMenuOpen(true);
         }}
       />
-      <ul className='menu-list hidden'>
+      <ul className='menu-list'>
         <li
-          className='menu-item hover-hand'
+          className='menu-item'
           onClick={() => {
             changeDisplay('Selection');
           }}>
           Main Menu
         </li>
         <li
-          className='menu-item hover-hand'
+          className='menu-item'
           onClick={() => {
             changeDisplay('Glossary');
           }}>
@@ -74,7 +50,7 @@ const Menu = props => {
         {/* Map over all stories in Stories array and add each to the menu */}
         {Stories.map((story, index) => (
           <li
-            className='menu-item hover-hand'
+            className='menu-item'
             onClick={() => {
               changeStory(story, 'Story');
             }}
