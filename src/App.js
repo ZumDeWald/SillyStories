@@ -50,7 +50,10 @@ class App extends Component {
         {this.state.display === 'Selection' ? (
           <Selection handleSetStory={this.setStory} />
         ) : this.state.display === 'Story' ? (
-          <Story chosenStory={this.state.story} />
+          <Story
+            chosenStory={this.state.story}
+            handleChangeDisplay={this.changeDisplay}
+          />
         ) : this.state.display === 'Glossary' ? (
           <Glossary />
         ) : (

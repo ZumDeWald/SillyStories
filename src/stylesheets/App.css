@@ -102,8 +102,24 @@ hr:nth-of-type(2) {
   border-bottom: 1px solid #000;
 }
 
-.hover-hand:hover {
+.hover-hand {
   cursor: pointer;
+}
+
+/* ==== Helpers ==== */
+
+.closed {
+  height: 0;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.rotate-90 {
+  transform: rotate(-180deg);
+  box-shadow: 1px 3px 8px #000;
 }
 
 /*
